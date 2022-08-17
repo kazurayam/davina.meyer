@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>davina.meyer</title>
+    </head>
+    <body>
+        <h1>TIMESTAMP: </h1>
+        <p id="clock">clock</p>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+        <script>
+         /**
+          * display the current timestamp in the format of "07:22:13".
+          * create a cookie "timestamp".
+          */
+         $(document).ready(function() {
+             var m = new Date();
+             var dateString = m.getUTCFullYear() +"-"+ (m.getUTCMonth()+1) +"-"+
+                              m.getUTCDate() + " T " + m.getUTCHours() + ":" +
+                              m.getUTCMinutes() + ":" + m.getUTCSeconds() + "." +
+                              m.getUTCMilliseconds() + "Z";
+             console.log(dateString)
+             $('#clock').text(dateString);
+
+         })
+
+        </script>
+
+    </body>
+</html>
