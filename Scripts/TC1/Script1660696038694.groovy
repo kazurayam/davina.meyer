@@ -45,7 +45,7 @@ println("current timestamp is: " + currentTimestamp.format(formatter))
 long diff = ChronoUnit.SECONDS.between(parsedTimestamp, currentTimestamp);
 println("diff is: " + diff)
 
-// make sure the difference is less than 10 secodns
+// make sure the difference is less than 10 seconds
 assert diff < 10
 
 // close the page
